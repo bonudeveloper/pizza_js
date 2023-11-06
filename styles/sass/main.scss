@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 30px;
+    display: flex;
+}
+.half {
+    width: 50%;
+    padding: 1rem ;
+}
+%layer {    //pomidor va onion,mahsulotlar
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width:100% ;
+    aspect-ratio: 1;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
+.zakazBtn {
+    display: flex;
+    gap: 50px;
+    margin-top: 5%;
+    align-items: center;
+    .btn {
+        width: 250px;
+        height: 70px;
+        background-color: chocolate;
+        color: white;
+        font-size: 2rem;
+        border-radius: 20px;
+        border: none;
+    }
+}
+
+.pizza {
+    position: relative;
+    
+
+    .bread {
+       @extend %layer;
+        background: radial-gradient(#ecbe52, #cf9612 );
+        border-radius: 50%;
+        border: 15px solid  #bc4f00;
+        display: block;
+        z-index: -2;
+    }
+
+    .tomatoes {
+       @extend %layer;
+
+       .tomato {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            bottom: 10px;
+            background-color: tomato;
+            width: 35%;
+            border-radius: 100% 10% 10% 100% / 50% 10px 10px 50%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            background-color: tomato;
+            width: 35%;
+            border-radius: 10% 100% 100% 10% / 10% 50px 50px 10%;
+        }
+        
+       }
+       .tomato-1 {
+            top: 30%;
+            left: 30%;
+        }
+        .tomato-2 {
+          top: 70%;
+          left: 30%;
+        }
+        .tomato-3 {
+            top:70% ;
+            left: 70%;
+        }
+        .tomato-4 {
+            top: 30%;
+            left: 70%;
+        }
+    }
+
+    .onions {
+         @extend %layer;
+
+         .onion {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 10px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px grey, 0 0 0 10px white, 0 0 0 11px grey,0 0 0 20px white, 0 0 0 21px grey, 0 0 0 30px white ;
+            position: absolute;
+            transform: translate(-50%, -50%);
+         }
+
+         .onion-1 {
+            top: 15%;
+            left: 50%;
+         }
+         .onion-2 {
+            top: 85%;
+            left: 50%;
+         }
+         .onion-3 {
+            top: 50%;
+            left: 15%;
+         }
+         .onion-4 {
+            top: 50%;
+            left: 85%;
+         }
+    }
+
+    .pineapples {
+        position: absolute;
+        top: 0;
+        left: 0; 
+        width:100% ;
+        aspect-ratio: 1;
+        display: none;
+
+         &.show {
+            display: block;
+    }
+
+        .pineapple {
+        //    width:100px;
+        //    height: 30px;
+        //    background-color: yellow; 
+        //    transform: rotate(45deg);
+           width: 90px;
+           height: 90px;
+           border-radius: 5px;
+           background-color: yellow;
+           transform: rotate(45deg);
+           position: absolute;
+        
+        }
+        .pineapple-1 {
+            left: 65%;
+            top: 35%;
+        }
+        .pineapple-2 {
+            left: 30%;
+            top: 35%;
+        }
+        .pineapple-3 {
+            left: 65%;
+            top: 55%;
+        }
+        .pineapple-4 {
+            left: 30%;
+            top: 55%;
+        }
+    }
+
+    .qazilar {
+        position: absolute;
+        top: 0;
+        left: 0; 
+        width:100% ;
+        aspect-ratio: 1;
+        display: none;
+        
+         &.show {
+            display: block;
+    }
+
+        .qazi {
+            width: 100px;
+            height: 100px;
+            background-color: #8b4513;
+            border-radius: 50%;
+            position: absolute;
+
+            &::before{
+                content: "";
+                width: 60px;
+                height: 60px;
+                background-color: rgb(196, 126, 60);
+                left: 20%;
+                top: 20%;
+                border-radius: 50%;
+                position: absolute;
+            }
+        }
+        .qazi-1 {
+            top: 10%;
+            left: 68%;
+        }
+        .qazi-2 {
+            top: 10%;
+            left: 25%;
+        }
+        .qazi-3 {
+            top: 30%;
+            left: 83%;
+        }
+        .qazi-4 {
+            top: 30%;
+            left: 10%;
+        }
+        .qazi-5 {
+            top: 65%;
+            left: 10%;
+        }
+        .qazi-6 {
+            top: 65%;
+            left: 80%;
+        }
+        .qazi-7 {
+            top: 80%;
+            left: 30%;
+        }
+        .qazi-8 {
+            top: 80%;
+            left: 62%;
+        }
+    }
+
+    
+
+    .ketchupp {
+        
+
+         .ketchup {
+            border-radius: 50%;
+            position: absolute;
+            top: 25px;
+            display: none;
+            left: 25px; 
+            width:96% ;
+            aspect-ratio: 1;
+            background-color: crimson;
+            z-index: -1;
+
+            &.show {
+            display: block;
+    }
+            
+         }
+    }
+
+    
+}

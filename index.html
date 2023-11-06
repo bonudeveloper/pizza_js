@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/css/minified/main.min.css">
+</head>
+<body>
+    <div class="half">
+        <div class="pizza">
+            <div class="bread"></div>
+            
+            <div class="tomatoes">
+              <div class="tomato tomato-1"></div> 
+              <div class="tomato tomato-2"></div> 
+              <div class="tomato tomato-3"></div> 
+              <div class="tomato tomato-4"></div>  
+            </div>
+            <div class="onions">
+                <div class="onion onion-1"></div> 
+              <div class="onion onion-2"></div> 
+              <div class="onion onion-3"></div> 
+              <div class="onion onion-4"></div>
+            </div>
+            <div class="pineapples">
+                <div class="pineapple pineapple-1"></div> 
+              <div class="pineapple pineapple-2"></div> 
+              <div class="pineapple pineapple-3"></div> 
+              <div class="pineapple pineapple-4"></div>
+            </div>
+            <div class="qazilar">
+                <div class="qazi qazi-1"></div> 
+              <div class="qazi qazi-2"></div> 
+              <div class="qazi qazi-3"></div> 
+              <div class="qazi qazi-4"></div>
+              <div class="qazi qazi-5"></div> 
+              <div class="qazi qazi-6"></div>
+              <div class="qazi qazi-7"></div> 
+              <div class="qazi qazi-8"></div>
+            </div>
+            <!-- <div class="sausages">sosiska</div>
+            <div class="cheesee">sir</div>
+            <div class="mashrooms">qoziqorin</div>
+            <div class="olives">olivka</div> -->
+            <div class="ketchupp">
+                <div class="ketchup"></div>
+            </div>
+            <!-- <div class="mayos">
+                <div class="m1">
+                    <div class="m2">
+                        <div class="3"></div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="half">
+        <h2>Build your own PIZZA</h2>
+        <ul class="toppings">
+           <li>Bread - $2</li>
+           <li class="topping"  data-price="1" data-target=".ketchup">Ketchup - $0.5 <input type="checkbox"  id="checkbox"></li>
+           <li class="topping"  data-price="1" data-target=".tomatoes">Tomatoes - $1 <input type="checkbox"  id="checkbox"></li>
+           <li class="topping" data-price="1" data-target=".onions">Onions - $1 <input type="checkbox"  id="checkbox"></li> 
+           <li class="topping" data-price="1" data-target=".qazilar">Qazi - $12 <input type="checkbox"  id="checkbox"></li>
+           <li class="topping" data-price="1" data-target=".pineapples">Pineapple - $4 <input type="checkbox"  id="checkbox"></li>  
+        </ul>
+        <h3>Total: $<span class="total">2</span></h3>
+        <div class="zakazBtn">
+        <button class="btn">Order</button>
+        <p>Your Order: <span class="numZakaz">number</span></p>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
