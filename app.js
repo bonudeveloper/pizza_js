@@ -2,7 +2,7 @@ let toppings = document.querySelectorAll(".topping"); // toppinglani tanlash
 let total = 2; //defolt qiymat
 
 function updatePrice(){ 
-   document.querySelector(".total").textContent = total;
+   document.querySelector(".total").textContent = total; //total price korsatib turadgon h3 uwavoldik funksiya yasavoganimizi sababi pasdagi bajargan ammalarimiz iwga tuwiwi uchun wu bor total narhga qo'wib boriwi un
 }
 
 let btn = document.querySelector(".btn");
@@ -16,13 +16,13 @@ function zakaz() {
 }
 zakaz();
 
-toppings.forEach((t) => {  //toppings har biriga
+toppings.forEach((t) => {  //toppings har biriga click bo'ganda iwga tuwadi
     t.addEventListener("click" , (e) => {
       let li = e.target;
       
       while (li.tagName !=="LI"){
         li = e.target.parentElement; //li ni ovoldik
-      }
+      } // wuni o'zi etvotiki li bu ota element ichidagi bn oziniyam bosganda iwlasin db
 
       let checkbox = li.children[0]; //checkbox ni ovoldik lini ichidagi bolasi(0 chi indeksida turgan narsa)
       let price = +li.getAttribute("data-price"); //atribute yordamida price ovolamiz,price o'qiladi (+bn price ni songa aylantirdik)
@@ -31,17 +31,17 @@ toppings.forEach((t) => {  //toppings har biriga
        //mahsulotlar ko'rinsin show klassi qo'shilgani un
 
       if(checkbox.checked) { //agar checkbox checked bo'gan bo'sa uni checked versiyasini false ga almashtiramiz
-        checkbox.checked = false;
+        checkbox.checked = false; //mahsulot nomini bossa false
         target.classList.remove("show"); 
         total -= price; // checkboxmiz checheked bo'p ptichkasi obtashlanganidan kegn total dan ayiramiz narhni
-        
+        // har bosganda yo o'chadi yo' chqadi mahsulotlar
 
       }else { //yo'ki truega almashtiramiz
-        checkbox.checked = true;
+        checkbox.checked = true; //checbox ozini bossa true bovoti
         target.classList.add("show");
         total += price;
        
-        updatePrice();
+        updatePrice();//pricelani yasab bo'gandan kegn funksiya iwga tuwirdik
       }
     })
 })
